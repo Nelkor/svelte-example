@@ -1,10 +1,23 @@
 <script>
-const a = 1
-const b = 2
+import { Router, Route, Link } from 'svelte-navigator'
 
-const c = a + b
+import { MainPage } from '@/main-page'
 </script>
 
-<h1>Hello {c}</h1>
-<p>Просто текст</p>
-<button>Click me!</button>
+<Router>
+  <h1>The application</h1>
+
+  <nav>
+    <Link to="/">Root</Link>
+    <Link to="about">About</Link>
+  </nav>
+
+  <Route path="about">
+    <h3>About</h3>
+    <p>That's what it's all about!</p>
+  </Route>
+
+  <Route>
+    <MainPage />
+  </Route>
+</Router>

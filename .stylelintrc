@@ -5,6 +5,7 @@
   ],
   "plugins": ["stylelint-order", "stylelint-scss", "stylelint-color-format"],
   "rules": {
+    "linebreaks": "unix",
     "function-url-quotes": "never",
     "indentation": 2,
     "at-rule-empty-line-before": [
